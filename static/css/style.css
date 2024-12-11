@@ -1,0 +1,290 @@
+@font-face {
+    font-family: 'Tlotr';
+    src: url(../fonte/RINGM___.TTF) format('truetype');
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Tlotr', Courier, monospace;
+}
+
+div {
+    color: rgb(255, 255, 255);
+    font-family: 'Tlotr', Courier, monospace;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+.paragrafo1,
+.paragrafo2 {
+    flex: 1;
+}
+
+header {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-family: 'Tlotr', Courier, monospace;
+}
+
+span {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Tlotr', Courier, monospace;
+}
+
+a {
+    font-family: 'Tlotr', Courier, monospace;
+}
+
+body {
+    background-image: url(../img/valfenda.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+.container .paragrafo1,
+.container .paragrafo2 {
+    font-family: 'Tlotr', Courier, monospace;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 50px;
+}
+
+.grade {
+    display: grid;
+    width: 100%;
+    max-width: 900px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.carta {
+    width: 100%;
+    aspect-ratio: 3/4;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+
+.carta-escondida {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+
+.frente {
+    transform: rotateY(180deg);
+}
+
+.atras {
+    background-image: url(../img/atras.jpg);
+    backface-visibility: hidden;
+}
+
+.cartao-revelacao {
+    transform: rotateY(180deg);
+}
+
+@media only screen and (min-width: 400px) and (max-width: 700px) {
+    body {
+        background-size: contain;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .grade {
+        max-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .carta {
+        aspect-ratio: 1/1;
+    }
+
+    .paragrafo1,
+    .paragrafo2 {
+        flex: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 701px) {
+    main {
+        padding: 20px 20px 50px;
+    }
+
+    .grade {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .carta {
+        aspect-ratio: 3/4;
+    }
+
+    .paragrafo1,
+    .paragrafo2 {
+        flex: 1;
+        margin-bottom: 0;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form input[type="text"] {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) inset;
+    box-sizing: border-box; 
+    font-family: 'Tlotr', Courier, monospace;
+}
+
+form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: black;
+    color: yellow;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; 
+    box-sizing: border-box; 
+    font-family: 'Tlotr', Courier, monospace;
+}   
+
+form button[type="submit"]:hover {
+    background-color: #009edd;
+    font-family: 'Tlotr', Courier, monospace;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; 
+    margin-top: 20px;
+}
+
+nav a {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: yellow;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #009edd;
+}
+
+nav a {
+    padding: 10px 20px; 
+    background-color: #000000;   
+    color: yellow; 
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block; 
+    transition: background-color 0.3s ease; 
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+tbody {
+    color: black;
+}
+
+thead {
+    background-color: #000000;
+    color: yellow;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    font-weight: bold;
+}

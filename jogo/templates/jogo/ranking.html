@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="icon" href="{% static 'img/ring.png' %}">
+</head>
+<body>
+    <h1>Ranking</h1>
+    
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>Nome do Jogador</th>
+                    <th>Tentativas</th>
+                    <th>Data e Hora</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for partida in partidas %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ partida.nome_jogador }}</td>
+                    <td>{{ partida.tentativas }}</td>
+                    <td>{{ partida.ultima_partida }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <nav>
+        <a href="{% url 'jogo' %}">Ir Para o Jogo</a>
+    </nav>
+
+    <footer>
+        <div class="container">
+            <div class="paragrafo1">
+                Atividade <br>
+                Disciplina: Programação para Internet <br>
+                Professor: Marcelo Figueiredo Barbosa Júnior <br>
+                IFRN - Campus Santas Cruz
+            </div>
+            <div class="paragrafo2">
+                Grupo <br>
+                Arthur Dantas Medeiros <br>
+                Natanael Marques do Nascimento
+            </div>
+        </div>
+        <p>Todos os Direitos Reservados &copy;</p>
+    </footer>
+
+</body>
+</html>

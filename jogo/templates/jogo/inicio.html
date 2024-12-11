@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'img/ring.png' %}">
+</head>
+<body>
+    <header>
+        <h1>
+            JOGO DA MEMÓRIA <br>
+            O SENHOR DOS ANÉIS
+        </h1>
+    </header>
+    
+    <nav>
+        <a href="{% url 'login' %}">Jogar</a>
+        <a href="{% url 'ranking' %}">Ver Ranking</a>
+    </nav>
+
+    <footer>
+        <div class="container">
+            <div class="paragrafo1">
+                Atividade <br>
+                Disciplina: Programação para Internet <br>
+                Professor: Marcelo Figueiredo Barbosa Júnior <br>
+                IFRN - Campus Santas Cruz
+            </div>
+            <div class="paragrafo2">
+                Grupo <br>
+                Arthur Dantas Medeiros <br>
+                Natanael Marques do Nascimento
+            </div>
+        </div>
+        <p>Todos os Direitos Reservados &copy;</p>
+    </footer>
+</body>
+</html>
